@@ -56,10 +56,14 @@ Make sure to `View()` the resulting data frame (remember: run `View()` in the Co
 
 **Note: You should get a warning about one piece dropped. What happens to the name in Row 49, which contains two dashes?
 
+**Answer: In Row 49, R dropped "Mundi" from "Ki-Adi-Mundi"
+
 ```{r}
 # Your code here: 
-
-
+sw_split_name <- starwars %>% 
+  separate(col = name,
+           into = c("name_1", "name_2"),
+           sep = "-")
 ```
 
 #### 1B. Follow me
