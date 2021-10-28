@@ -171,7 +171,11 @@ In the code chunk below, use `ymd()` to convert a date that you choose in `YYYY-
 
 ```{r}
 # Your code here: 
+ymd(19950214)
 
+ymd("1995-02-14")
+
+ymd("1995/02/14")
 
 ```
 
