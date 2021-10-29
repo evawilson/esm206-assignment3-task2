@@ -253,10 +253,13 @@ gasol_hookshots <- lakers %>%
   filter(player == "Pau Gasol",
          type == "hook") %>% 
   mutate(date_new = ymd(date)) %>% 
-  mutate(month_new = month(date_new)) %>% 
+  mutate(month_new = month(date_new))
+
+gasol_hookshots_by_month <- gasol_hookshots %>% 
+  group_by(month_new) %>% 
   count(month_new)
 
-gasol_hookshots
+gasol_hookshots_by_month
 
 ```
 
